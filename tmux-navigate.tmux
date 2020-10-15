@@ -16,7 +16,7 @@
 
 get_tmux_option() { tmux show-option -gqv "$@" | grep . ;}
 
-navigate=$(sed '1,/^exit #.*$/d; s/^ *#.*//; /^$/d' "$0")
+navigate=$(sed '1,/^exit ☯.*$/d; s/^ *☯.//; /^$/d' "$0")
 navigate_left=" $navigate L 'tmux select-pane -L'  'tmux send-keys C-w h'"
 navigate_down=" $navigate D 'tmux select-pane -D'  'tmux send-keys C-w j'"
 navigate_up="   $navigate U 'tmux select-pane -U'  'tmux send-keys C-w k'"
